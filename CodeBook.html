@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Code Book</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h1>Code Book</h1>
+
+<p>This code book describes all of the data fields in the <code>FinalTidyData.txt</code> file.</p>
+
+<h2>Identifiers</h2>
+
+<ul>
+<li><code>subject</code> - <code>integer</code> - The ID of the test subject (values from 1 to 30)</li>
+<li><code>activity</code> - <code>string</code> - The type of activity performed when the corresponding measurements were taken</li>
+</ul>
+
+<h2>Measurements</h2>
+
+<p>These variables are all of the <code>mean</code> values for the corresponding measurement based on the subject and the activity. These are all of data type <code>numeric</code>.</p>
+
+<ul>
+<li>TimeBodyAccelerometer.mean&hellip;X</li>
+<li>TimeBodyAccelerometer.mean&hellip;Y</li>
+<li>TimeBodyAccelerometer.mean&hellip;Z</li>
+<li>TimeGravityAccelerometer.mean&hellip;X</li>
+<li>TimeGravityAccelerometer.mean&hellip;Y</li>
+<li>TimeGravityAccelerometer.mean&hellip;Z</li>
+<li>TimeBodyAccelerometerJerk.mean&hellip;X</li>
+<li>TimeBodyAccelerometerJerk.mean&hellip;Y</li>
+<li>TimeBodyAccelerometerJerk.mean&hellip;Z</li>
+<li>TimeBodyGyroscope.mean&hellip;X</li>
+<li>TimeBodyGyroscope.mean&hellip;Y</li>
+<li>TimeBodyGyroscope.mean&hellip;Z</li>
+<li>TimeBodyGyroscopeJerk.mean&hellip;X</li>
+<li>TimeBodyGyroscopeJerk.mean&hellip;Y</li>
+<li>TimeBodyGyroscopeJerk.mean&hellip;Z</li>
+<li>TimeBodyAccelerometerMagnitude.mean..</li>
+<li>TimeGravityAccelerometerMagnitude.mean..</li>
+<li>TimeBodyAccelerometerJerkMagnitude.mean..</li>
+<li>TimeBodyGyroscopeMagnitude.mean..</li>
+<li>TimeBodyGyroscopeJerkMagnitude.mean..</li>
+<li>FrequencyBodyAccelerometer.mean&hellip;X</li>
+<li>FrequencyBodyAccelerometer.mean&hellip;Y</li>
+<li>FrequencyBodyAccelerometer.mean&hellip;Z</li>
+<li>FrequencyBodyAccelerometer.meanFreq&hellip;X</li>
+<li>FrequencyBodyAccelerometer.meanFreq&hellip;Y</li>
+<li>FrequencyBodyAccelerometer.meanFreq&hellip;Z</li>
+<li>FrequencyBodyAccelerometerJerk.mean&hellip;X</li>
+<li>FrequencyBodyAccelerometerJerk.mean&hellip;Y</li>
+<li>FrequencyBodyAccelerometerJerk.mean&hellip;Z</li>
+<li>FrequencyBodyAccelerometerJerk.meanFreq&hellip;X</li>
+<li>FrequencyBodyAccelerometerJerk.meanFreq&hellip;Y</li>
+<li>FrequencyBodyAccelerometerJerk.meanFreq&hellip;Z</li>
+<li>FrequencyBodyGyroscope.mean&hellip;X</li>
+<li>FrequencyBodyGyroscope.mean&hellip;Y</li>
+<li>FrequencyBodyGyroscope.mean&hellip;Z</li>
+<li>FrequencyBodyGyroscope.meanFreq&hellip;X</li>
+<li>FrequencyBodyGyroscope.meanFreq&hellip;Y</li>
+<li>FrequencyBodyGyroscope.meanFreq&hellip;Z</li>
+<li>FrequencyBodyAccelerometerMagnitude.mean..</li>
+<li>FrequencyBodyAccelerometerMagnitude.meanFreq..</li>
+<li>FrequencyBodyAccelerometerJerkMagnitude.mean..</li>
+<li>FrequencyBodyAccelerometerJerkMagnitude.meanFreq..</li>
+<li>FrequencyBodyGyroscopeMagnitude.mean..</li>
+<li>FrequencyBodyGyroscopeMagnitude.meanFreq..</li>
+<li>FrequencyBodyGyroscopeJerkMagnitude.mean..</li>
+<li>FrequencyBodyGyroscopeJerkMagnitude.meanFreq..</li>
+<li>Angle.tBodyAccelerometerMean.Gravity.</li>
+<li>Angle.tBodyAccelerometerJerkMean..GravityMean.</li>
+<li>Angle.tBodyGyroscopeMean.GravityMean.</li>
+<li>Angle.tBodyGyroscopeJerkMean.GravityMean.</li>
+<li>Angle.X.GravityMean.</li>
+<li>Angle.Y.GravityMean.</li>
+<li>Angle.Z.GravityMean.</li>
+<li>TimeBodyAccelerometer.std&hellip;X</li>
+<li>TimeBodyAccelerometer.std&hellip;Y</li>
+<li>TimeBodyAccelerometer.std&hellip;Z</li>
+<li>TimeGravityAccelerometer.std&hellip;X</li>
+<li>TimeGravityAccelerometer.std&hellip;Y</li>
+<li>TimeGravityAccelerometer.std&hellip;Z</li>
+<li>TimeBodyAccelerometerJerk.std&hellip;X</li>
+<li>TimeBodyAccelerometerJerk.std&hellip;Y</li>
+<li>TimeBodyAccelerometerJerk.std&hellip;Z</li>
+<li>TimeBodyGyroscope.std&hellip;X</li>
+<li>TimeBodyGyroscope.std&hellip;Y</li>
+<li>TimeBodyGyroscope.std&hellip;Z</li>
+<li>TimeBodyGyroscopeJerk.std&hellip;X</li>
+<li>TimeBodyGyroscopeJerk.std&hellip;Y</li>
+<li>TimeBodyGyroscopeJerk.std&hellip;Z</li>
+<li>TimeBodyAccelerometerMagnitude.std..</li>
+<li>TimeGravityAccelerometerMagnitude.std..</li>
+<li>TimeBodyAccelerometerJerkMagnitude.std..</li>
+<li>TimeBodyGyroscopeMagnitude.std..</li>
+<li>TimeBodyGyroscopeJerkMagnitude.std..</li>
+<li>FrequencyBodyAccelerometer.std&hellip;X</li>
+<li>FrequencyBodyAccelerometer.std&hellip;Y</li>
+<li>FrequencyBodyAccelerometer.std&hellip;Z</li>
+<li>FrequencyBodyAccelerometerJerk.std&hellip;X</li>
+<li>FrequencyBodyAccelerometerJerk.std&hellip;Y</li>
+<li>FrequencyBodyAccelerometerJerk.std&hellip;Z</li>
+<li>FrequencyBodyGyroscope.std&hellip;X</li>
+<li>FrequencyBodyGyroscope.std&hellip;Y</li>
+<li>FrequencyBodyGyroscope.std&hellip;Z</li>
+<li>FrequencyBodyAccelerometerMagnitude.std..</li>
+<li>FrequencyBodyAccelerometerJerkMagnitude.std..</li>
+<li>FrequencyBodyGyroscopeMagnitude.std..</li>
+<li>FrequencyBodyGyroscopeJerkMagnitude.std..</li>
+</ul>
+
+<h2>Activity Labels</h2>
+
+<ul>
+<li>WALKING (value 1): subject was walking during the test</li>
+<li>WALKING_UPSTAIRS (value 2): subject was walking up a staircase during the test</li>
+<li>WALKING_DOWNSTAIRS (value 3): subject was walking down a staircase during the test</li>
+<li>SITTING (value 4): subject was sitting during the test</li>
+<li>STANDING (value 5): subject was standing during the test</li>
+<li>LAYING (value 6): subject was laying down during the test</li>
+</ul>
+
+</body>
+
+</html>
