@@ -80,4 +80,4 @@ if(!file.exists(folderName)) {
     group_by(subject, activity) %>%
     summarise_all(funs(mean))
   # Send the data out to a file
-  write.table(FinalTidyData, "FinalTidyData.txt", row.name=FALSE)
+  write.table(FinalTidyData, "FinalTidyData.txt", row.names = FALSE)
