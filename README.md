@@ -1,7 +1,7 @@
 # Getting and Cleaning Data Course Project
 
 This repository was built for **"Peer-graded Assignment: Getting and Cleaning Data Course Project"** from 
-the "Getting and Cleaning Data" course at Coursera.
+the **"Getting and Cleaning Data"** course at [Coursera](https://www.coursera.org).
 
 ## Project Requirements
 
